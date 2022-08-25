@@ -1,0 +1,25 @@
+@mixin flex_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin shadow_card($opacity_shadow) {
+    box-shadow: 1px 1px 5px 0px rgba(0,0,0,$opacity_shadow);
+}
+
+@mixin btn {
+    background: linear-gradient(180deg,$colour-secondary 0%, $colour-primary 80%);
+    padding: 15px 18px;
+    border: none;
+    border-radius: 40px;
+    color: $colour-clickable;
+    cursor: pointer;
+    @include shadow_card(0.6);
+
+    &:hover{
+        @include shadow_card(1);
+        background: linear-gradient(180deg,lighten($colour-secondary, 3%) 0%, lighten($colour-primary, 3%) 80%);
+
+    }
+}

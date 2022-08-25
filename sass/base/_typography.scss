@@ -1,0 +1,27 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+h1{
+    font-family: 'Shrikhand', cursive;
+}
+
+.header__location{
+    font-size: $font-size-title;
+    font-weight: 600;
+}
+
+.description{
+    &__title{
+        font-weight: 700;
+        width: 70%;
+    }
+
+    &__text{
+        font-weight: 300;
+    }
+}
+
+button{
+    font-size: $font-size-title;
+}
