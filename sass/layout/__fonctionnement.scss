@@ -1,0 +1,55 @@
+.fonctionnement{
+    width: 90%;
+    margin: 50px auto;
+    
+
+    &__title{
+        width: 90%;
+        margin-bottom: 30px;
+    }
+    
+    &__list{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+.fcard{
+    width: 100%;
+    height: 70px;
+    background-color: $colour-backgound;
+    border-radius: 20px;
+    position: relative;
+    @include flex-center;
+
+    &:nth-child(3){
+        background-color: lighten($colour-primary, 35%);
+    }
+
+    &__index{
+        position: absolute;
+        left: -10px;
+        background-color: $colour-primary;
+        height: 20px;
+        width: 20px;
+        border-radius: 40px;
+        @include flex-center;
+        color: white;
+    }
+
+    &__icon{
+        margin-left: -250px;
+        color: darken($colour-backgound, 40%);
+
+    }
+
+    &__text{
+        position: absolute;
+    }
+}
+
+#highlight-icon{
+        color: $colour-primary;
+}

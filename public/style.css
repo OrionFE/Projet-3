@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+li {
+  list-style: none;
+}
+
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -29,6 +33,10 @@ h1 {
 
 button {
   font-size: 15px;
+}
+
+.fcard__text {
+  font-weight: 500;
 }
 
 .btn {
@@ -83,6 +91,58 @@ button {
 .description__text {
   width: 90%;
   margin: 20px 0 30px 0;
+}
+
+.fonctionnement {
+  width: 90%;
+  margin: 50px auto;
+}
+.fonctionnement__title {
+  width: 90%;
+  margin-bottom: 30px;
+}
+.fonctionnement__list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.fcard {
+  width: 100%;
+  height: 70px;
+  background-color: #f6f6f6;
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fcard:nth-child(3) {
+  background-color: #f2eafb;
+}
+.fcard__index {
+  position: absolute;
+  left: -10px;
+  background-color: #9356DC;
+  height: 20px;
+  width: 20px;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.fcard__icon {
+  margin-left: -250px;
+  color: #909090;
+}
+.fcard__text {
+  position: absolute;
+}
+
+#highlight-icon {
+  color: #9356DC;
 }
 
 /*# sourceMappingURL=style.css.map */

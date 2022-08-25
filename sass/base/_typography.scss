@@ -25,3 +25,9 @@ h1{
 button{
     font-size: $font-size-title;
 }
+
+.fcard{
+    &__text{
+        font-weight: 500;
+    }
+}
