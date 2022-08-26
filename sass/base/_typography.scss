@@ -43,3 +43,17 @@ button{
         font-size: 24px;
     }
 }
+
+.footer{
+    &__logo{
+        font-family: 'Shrikhand', cursive;
+    }
+}
+
+.flist{
+    font-weight: 300;
+
+    &__text:nth-of-type(-n+2){
+        font-weight: 500;
+    }
+}
