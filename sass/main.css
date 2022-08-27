@@ -43,7 +43,7 @@ button {
   font-size: 14px;
   font-weight: 500;
 }
-.rcard .fa-heart {
+.rcard__icon {
   font-size: 24px;
 }
 
@@ -58,14 +58,6 @@ button {
   font-weight: 500;
 }
 
-@keyframes fill {
-  from {
-    transform: translateY(60%) rotate(0deg);
-  }
-  to {
-    transform: translate(0) rotate(360deg);
-  }
-}
 .btn {
   background: linear-gradient(180deg, #FF79DA 0%, #9356DC 80%);
   padding: 15px 18px;
@@ -89,6 +81,7 @@ button {
   justify-content: center;
   align-items: center;
   box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.6);
+  position: -webkit-sticky;
   position: sticky;
 }
 .header__location {
@@ -122,6 +115,8 @@ button {
 
 .fonctionnement {
   width: 90%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   margin: 50px auto;
 }
@@ -202,8 +197,10 @@ button {
 .rcard__img {
   width: 100%;
   height: 170px;
-  object-fit: cover;
-  object-position: 50% 60%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 60%;
+     object-position: 50% 60%;
   border-radius: 20px 20px 0 0;
 }
 .rcard__new {
@@ -227,20 +224,24 @@ button {
   margin-left: 5%;
 }
 .rcard__icon {
-  position: relative;
-  bottom: 15%;
-  left: 85%;
+  position: absolute;
+  right: 30px;
+  bottom: 40px;
   color: white;
+  text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
   cursor: pointer;
 }
-.rcard__icon__fill {
-  position: absolute;
-  transform-origin: 10px 10px;
-  background: blue;
-  transform: translate(0, 20px);
+.rcard__icon--filling {
+  -webkit-background-clip: text;
+          background-clip: text;
+  background: linear-gradient(180deg, #FF79DA 0%, #9356DC 80%);
+  color: transparent;
+  transform-origin: bottom;
+  transform: scale(0);
+  transition: 300ms ease-in-out;
 }
-.rcard__icon:hover .rcard__icon__fill {
-  animation: fill 2s ease-in-out forwards;
+.rcard__icon:hover + .rcard__icon--filling {
+  transform: scale(1);
 }
 
 .footer {
@@ -265,6 +266,4 @@ button {
 
 .flist__icon {
   margin-right: 5px;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=main.css.map */

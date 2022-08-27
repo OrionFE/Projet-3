@@ -74,7 +74,44 @@
                     <h3 class="rcard__title">La palette du goût</h3>
                     <p class="rcard__quartier">Ménilmontant</p>
 
-                    <i class="rcard__icon fa-solid fa-heart"></i>
+                    <!-- <i class="rcard__icon fa-solid fa-heart">
+                        <span class="rcard__icon__fill"></span>
+                    </i> -->
+
+                    <svg 
+                    style="color: rgb(0, 0, 0);
+                    " xmlns="http://www.w3.org/2000/svg" 
+                    width="50" 
+                    height="50" 
+                    fill="currentColor" 
+                    class="bi bi-heart rcard__icon" 
+                    viewBox="0 0 40 40">
+
+                        <clipPath id="heart-mask">
+                            <path  
+                            transform= "translate(2, 2)"
+                            d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z">
+                            </path>
+
+                        </clipPath>
+
+                        <path transform="translate(2, 2)" fill="none" stroke="#000000" stroke-width="1" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+
+                        <defs>
+                            <linearGradient id="gradient">
+                              <stop offset="0%"   stop-color="#9356DC" />
+                              <stop offset="80%" stop-color="#FF79DA" />
+                            </linearGradient>
+                          </defs>
+
+                        <g clip-path="url(#heart-mask)">
+                            <rect class="rcard__icon__fill" x="0" y="0" width="20" height="20" rx="5" ry="5" fill= url(#gradient) />
+                        </g>
+                
+
+                        
+                    </svg>
+
 
                 </li>
 

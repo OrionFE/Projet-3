@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./public/style.css"
+    "sass": "sass --watch ./sass/main.scss:./public/style.css",
+    "prefix": "postcss ./public/style.css --use autoprefixer -d ./public/prefixed"
   },
   "repository": {
     "type": "git",
@@ -13,6 +14,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "browserslist": "last 4 versions",
   "bugs": {
     "url": "https://github.com/OrionFE/Projet-3/issues"
   },

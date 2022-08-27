@@ -56,18 +56,23 @@
     }
 
     &__icon{
-        position: absolute;
-        right: 30px;
-        bottom: 40px;
+        position: relative;
+        bottom: 15%;
+        left: 85%;
         color: white;
-        text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+        cursor: pointer;
 
-        &:hover{
-            color: $colour-primary;
+        &__fill{
+            position: absolute;
+            transform-origin: 10px 10px;
+            background: blue;
+            transform: translate(0,20px);
         }
 
+        &:hover .rcard__icon__fill{
+            animation: fill 2s ease-in-out forwards;
+        }
     }
-
 
 
 }
