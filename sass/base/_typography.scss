@@ -4,11 +4,17 @@ body{
 
 h1{
     font-family: 'Shrikhand', cursive;
+    font-size: $font-size-logo;
 }
 
 .header__location{
     font-size: $font-size-title;
     font-weight: 600;
+}
+
+.loader{
+    font-family: 'Shrikhand', cursive;
+    font-size: $font-size-logo;
 }
 
 .description{

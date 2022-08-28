@@ -8,6 +8,37 @@
         transform: translate(0) rotate(360deg);
     }
 
+}
+
+@keyframes load-oh {
     
+    0% { transform: translate(-100vw,($space-loader * 2)) ; }
+
+    40%, 70% { transform:translate(0,($space-loader * 2)) ; }
+
+    100%{ transform: translate(100vw, ($space-loader * 2) );}
+}
+
+@keyframes load-my {
+    
+    0% { transform: translate(-100vw, $space-loader) ; }
+
+    40%, 70% { transform:translate(0, $space-loader) ; }
+
+    100%{ transform: translate(100vw, $space-loader );}
+}
+
+@keyframes load-food {
+    
+    0% { transform: translate(-100vw,0) ; }
+
+    40%, 70% { transform:translate(0,0) ; }
+
+    100%{ transform: translate(100vw, 0 );}
+}
+
+@keyframes load-background {
+        0% { opacity:1;}
+        100% { visibility: hidden; opacity: 0;}
 }
 
