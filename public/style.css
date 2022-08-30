@@ -51,13 +51,35 @@ h1 {
 .description__text {
   font-weight: 300;
 }
+@media screen and (min-width: 768px) {
+  .description__text {
+    font-size: 18px;
+  }
+}
 
 button {
   font-size: 15px;
 }
+@media screen and (min-width: 768px) {
+  button {
+    font-size: 17px;
+  }
+}
 
 .fcard__text {
   font-weight: 500;
+}
+@media screen and (min-width: 768px) {
+  .fcard__index {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .fcard__text {
+    font-size: 18px;
+  }
+  .fcard__icon {
+    font-size: 20px;
+  }
 }
 
 .rcard__new {
@@ -83,6 +105,9 @@ button {
   font-family: "Shrikhand", cursive;
   font-size: 23px;
 }
+.Mmain__btn {
+  font-size: 20px;
+}
 
 .entrees__title, .plats__title, .desserts__title {
   font-weight: 300;
@@ -100,6 +125,17 @@ button {
 }
 .entrees__card__price, .plats__card__price, .desserts__card__price {
   font-weight: 500;
+}
+@media screen and (min-width: 768px) {
+  .entrees__title, .plats__title, .desserts__title {
+    font-size: 18px;
+  }
+  .entrees__card, .plats__card, .desserts__card {
+    font-size: 16px;
+  }
+  .entrees__card__description, .plats__card__description, .desserts__card__description {
+    font-size: 16px;
+  }
 }
 
 @keyframes fill {
@@ -275,7 +311,14 @@ button {
   width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 20px;
+}
+@media screen and (min-width: 768px) {
+  .fonctionnement__title {
+    width: 100%;
+    margin-left: 25%;
+  }
 }
 
 .fcard {
@@ -309,6 +352,23 @@ button {
 }
 .fcard__text {
   position: absolute;
+}
+@media screen and (min-width: 768px) {
+  .fcard {
+    width: 50%;
+    gap: 20px;
+  }
+  .fcard__icon {
+    margin: 0;
+  }
+  .fcard__text {
+    position: static;
+  }
+  .fcard__index {
+    left: -70px;
+    height: 40px;
+    width: 40px;
+  }
 }
 
 #highlight-icon {
@@ -383,6 +443,14 @@ button {
 .rcard__icon:hover .rcard__icon__fill {
   animation: fill 2s ease-in-out forwards;
 }
+@media screen and (min-width: 768px) {
+  .rcard {
+    height: 300px;
+  }
+  .rcard__img {
+    height: 220px;
+  }
+}
 
 .footer {
   width: 100%;
@@ -439,6 +507,7 @@ button {
 }
 
 .Mmain {
+  width: 100%;
   background-color: #f6f6f6;
   border-radius: 30px 30px 0 0;
   position: relative;
@@ -451,7 +520,7 @@ button {
 .Mmain__containerTitle {
   width: 90%;
   display: flex;
-  gap: 70px;
+  justify-content: space-between;
   margin: 20px 0;
 }
 .Mmain__heart {
@@ -569,6 +638,17 @@ button {
 }
 .entrees__card:hover .entrees__card__checkout .fa-check, .entrees__card:hover .plats__card__checkout .fa-check, .entrees__card:hover .desserts__card__checkout .fa-check, .plats__card:hover .entrees__card__checkout .fa-check, .plats__card:hover .plats__card__checkout .fa-check, .plats__card:hover .desserts__card__checkout .fa-check, .desserts__card:hover .entrees__card__checkout .fa-check, .desserts__card:hover .plats__card__checkout .fa-check, .desserts__card:hover .desserts__card__checkout .fa-check {
   animation: checkout-icon-rotation-anim 500ms linear;
+}
+@media screen and (min-width: 768px) {
+  .entrees__title::after, .plats__title::after, .desserts__title::after {
+    width: 50px;
+  }
+  .entrees__card, .plats__card, .desserts__card {
+    height: 70px;
+  }
+  .entrees__card__price, .plats__card__price, .desserts__card__price {
+    margin-top: 25px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

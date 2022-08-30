@@ -73,5 +73,12 @@
         }
     }
 
+    @include tablet{
+        height: 300px;
+
+        &__img{
+            height: 220px;
+        }
+    }
 
 }

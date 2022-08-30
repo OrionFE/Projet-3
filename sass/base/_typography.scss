@@ -26,15 +26,40 @@ h1{
     &__text{
         font-weight: 300;
     }
+
+    @include tablet{
+        &__text{
+            font-size: 18px;
+        }
+    }
 }
 
 button{
     font-size: $font-size-title;
+
+    @include tablet{
+        font-size: $font-size-title+2;
+    }
 }
 
 .fcard{
     &__text{
         font-weight: 500;
+    }
+
+    @include tablet{
+        &__index{
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        &__text{
+            font-size: 18px;
+        }
+
+        &__icon{
+            font-size: 20px;
+        }
     }
 }
 
@@ -76,6 +101,10 @@ button{
         font-family: 'Shrikhand', cursive;
         font-size: 23px;
     }
+
+    &__btn{
+        font-size: 20px;
+    }
 }
 
 .entrees , .plats , .desserts{
@@ -100,5 +129,21 @@ button{
         &__price{
             font-weight: 500;
         }
+    }
+
+    @include tablet{
+        
+        &__title{
+            font-size: 18px;
+        }
+
+        &__card{
+            font-size: 16px;
+
+            &__description{
+                font-size: 16px;
+            }
+        }
+
     }
 }

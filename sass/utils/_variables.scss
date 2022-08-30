@@ -21,5 +21,8 @@ $anim-delay-loader: $anim-dur-loader / 8;
 
 $space-loader: -30px;
 
-
+$breakpoints: (
+    tablet: 768px,
+    dekstop: 1024px
+)
 

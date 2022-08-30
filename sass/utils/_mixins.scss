@@ -1,3 +1,16 @@
+@mixin tablet {
+    @media screen and (min-width: map-get($breakpoints, tablet)) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
+        @content;
+    }
+}
+
+
 @mixin flex_center {
     display: flex;
     justify-content: center;
@@ -72,8 +85,6 @@
         }
         
         &__container{
-            // width: 100%;
-            // flex: [max] [min] [ideal size];
             min-width: 0;
             flex: 0 0 80%;
             position: relative;
@@ -84,7 +95,6 @@
 
         &__name{
             margin-left: 20px;
-            // width: 80%;
             text-overflow: ellipsis;
             white-space: nowrap;
             overflow: hidden;
@@ -92,7 +102,6 @@
 
         &__description{
             margin-left: 20px;
-            // width: 80%;
             text-overflow: ellipsis;
             white-space: nowrap;
             overflow: hidden;
@@ -132,6 +141,23 @@
 
         &:hover &__checkout .fa-check {
             animation: checkout-icon-rotation-anim 500ms linear;
+        }
+    }
+
+    @include tablet{
+
+        &__title{
+            &::after{
+                width: 50px;
+            }
+        }
+
+        &__card{
+            height: 70px;
+
+            &__price{
+                margin-top: 25px;
+            }
         }
     }
 }
