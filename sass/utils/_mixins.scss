@@ -136,11 +136,11 @@
         }
 
         &:hover &__container {
-            animation: checkout-anim 500ms linear alternate forwards;
+            animation: checkout-anim 450ms ease-out alternate forwards;
         }
 
         &:hover &__checkout .fa-check {
-            animation: checkout-icon-rotation-anim 500ms linear;
+            animation: checkout-icon-rotation-anim 450ms ease-out;
         }
     }
 

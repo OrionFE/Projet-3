@@ -28,6 +28,17 @@
         height: 260px;
         object-fit: cover;
     }
+
+    @include desktop{
+
+        &__arrow{
+            display: none;
+        }
+
+        &__img{
+            height: 400px;
+        }
+    }
 }
 
 .Mmain{

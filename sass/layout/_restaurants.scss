@@ -16,6 +16,20 @@
         flex-direction: column;
         gap: 15px;
     }
+
+    @include desktop{
+
+        &__title{
+            margin-left: 8%;
+        }
+        
+        &__list{
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 50px;
+        }
+    }
 }
 
 .rcard{
@@ -81,4 +95,7 @@
         }
     }
 
+    @include desktop{
+        width: 45%;
+    }
 }

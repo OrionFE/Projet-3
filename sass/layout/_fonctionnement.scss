@@ -2,7 +2,9 @@
     width: 90%;
     height: fit-content;
     margin: 50px auto;
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
 
     &__title{
         width: 90%;
@@ -22,6 +24,20 @@
         &__title{
             width: 100%;
             margin-left: 25%;
+        }
+    }
+
+    @include desktop{
+
+        &__title{
+            margin-left: 0;
+            width: unset;
+        }
+
+        &__list{
+            flex-direction: row;
+            gap: 80px;
+            padding-left: 10px;
         }
     }
 }
@@ -73,13 +89,26 @@
         }
 
         &__index{
-            left: -70px;
+            left: -50px;
             height: 40px;
             width: 40px;
-
-
         }
 
+    }
+
+    @include desktop{
+        max-width: 400px;
+        opacity: 0;
+
+        $elements: 3;
+
+        @for $i from 0 to $elements {
+
+            &:nth-child(#{$i+1}){
+                animation: fade-in 500ms ($anim-dur-loader+($anim-delay-loader/2)+$anim-delay-loader)+$i*500ms ease-in forwards;
+            }
+
+        }
     }
 }
 
