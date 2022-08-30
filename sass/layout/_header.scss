@@ -3,9 +3,13 @@
     
     &__logo{
         height: 60px;
+        width: 100%;
         @include flex_center;
         box-shadow: 0px 1px 4px 0px $colour-shadow;
-        position: sticky;
+        position: fixed;
+        z-index: 5;
+        top: 0px;
+        background-color: white;
     }
     
     &__location{
@@ -44,12 +48,9 @@
     opacity: 1;
     position: absolute;
     top: 0;
-    z-index: 2;
+    z-index: 10;
     @include flex-center;
     animation: load-background 500ms ease-in $anim-dur-loader forwards;
-
-    &__word{
-    }
 
     &__oh{
         transform: translate(-100vw, ($space-loader * 2)); 

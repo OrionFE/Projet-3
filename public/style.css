@@ -16,6 +16,7 @@ li {
 
 a {
   text-decoration: none;
+  color: black;
 }
 a:visited {
   color: black;
@@ -75,6 +76,29 @@ button {
   font-weight: 500;
 }
 
+.Mmain__title {
+  font-family: "Shrikhand", cursive;
+  font-size: 23px;
+}
+
+.entrees__title, .plats__title, .desserts__title {
+  font-weight: 300;
+  font-size: 14px;
+}
+.entrees__card, .plats__card, .desserts__card {
+  font-size: 14px;
+}
+.entrees__card__name, .plats__card__name, .desserts__card__name {
+  font-weight: 500;
+}
+.entrees__card__description, .plats__card__description, .desserts__card__description {
+  font-weight: 300;
+  font-size: 13px;
+}
+.entrees__card__price, .plats__card__price, .desserts__card__price {
+  font-weight: 500;
+}
+
 @keyframes fill {
   from {
     transform: translateY(60%) rotate(0deg);
@@ -125,6 +149,24 @@ button {
     opacity: 0;
   }
 }
+@keyframes checkout-anim {
+  from {
+    transform: translateX(150%);
+    margin-left: 0;
+  }
+  to {
+    transform: translateX(0%);
+    margin-left: 30px;
+  }
+}
+@keyframes checkout-icon-rotation-anim {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 .btn {
   background: linear-gradient(180deg, #FF79DA 0%, #9356DC 80%);
   padding: 15px 18px;
@@ -144,11 +186,15 @@ button {
 }
 .header__logo {
   height: 60px;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.6);
-  position: sticky;
+  position: fixed;
+  z-index: 5;
+  top: 0px;
+  background-color: white;
 }
 .header__location {
   height: 50px;
@@ -186,7 +232,7 @@ button {
   opacity: 1;
   position: absolute;
   top: 0;
-  z-index: 2;
+  z-index: 10;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -321,7 +367,6 @@ button {
 .rcard__icon__fill {
   position: absolute;
   transform-origin: 10px 10px;
-  background: blue;
   transform: translate(0, 20px);
 }
 .rcard__icon:hover .rcard__icon__fill {
@@ -350,6 +395,154 @@ button {
 
 .flist__icon {
   margin-right: 5px;
+}
+
+.Mbody {
+  background-color: #f6f6f6;
+}
+
+.Mheader {
+  position: relative;
+}
+.Mheader__logo {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 5;
+  top: 0px;
+  background-color: white;
+}
+.Mheader__arrow {
+  position: fixed;
+  z-index: 6;
+  top: 23px;
+  left: 30px;
+}
+.Mheader__img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.Mmain {
+  background-color: #f6f6f6;
+  border-radius: 30px 30px 0 0;
+  position: relative;
+  top: -50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.Mmain__containerTitle {
+  width: 90%;
+  display: flex;
+  gap: 50px;
+  margin: 20px 0;
+}
+.Mmain__heart {
+  position: relative;
+  top: 5px;
+  color: white;
+  cursor: pointer;
+}
+.Mmain__heart__fill {
+  position: absolute;
+  transform-origin: 10px 10px;
+  transform: translate(0, 20px);
+}
+.Mmain__heart:hover .Mmain__heart__fill {
+  animation: fill 2s ease-in-out forwards;
+}
+.Mmain__dishes {
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.Mmain__btn {
+  margin: 50px 0;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.entrees, .plats, .desserts {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.entrees__title::after, .plats__title::after, .desserts__title::after {
+  content: "";
+  display: block;
+  width: 35px;
+  height: 2.5px;
+  background-color: #99E2D0;
+  margin-top: 5px;
+}
+.entrees__card, .plats__card, .desserts__card {
+  width: 100%;
+  height: 55px;
+  border-radius: 13px;
+  background-color: white;
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.2);
+  position: relative;
+  display: inline-flex;
+  overflow: hidden;
+  cursor: pointer;
+}
+.entrees__card__container, .plats__card__container, .desserts__card__container {
+  width: 120%;
+  position: relative;
+  left: 0;
+  margin: auto 0;
+}
+.entrees__card__name, .plats__card__name, .desserts__card__name {
+  margin-left: 20px;
+}
+.entrees__card__description, .plats__card__description, .desserts__card__description {
+  margin-left: 20px;
+  width: 80%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.entrees__card__price, .plats__card__price, .desserts__card__price {
+  position: absolute;
+  right: -20px;
+  bottom: 0px;
+}
+.entrees__card__checkout, .plats__card__checkout, .desserts__card__checkout {
+  width: 80px;
+  height: 100%;
+  background-color: #99E2D0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(150%);
+  margin-left: 0;
+}
+.entrees__card__checkout__circle, .plats__card__checkout__circle, .desserts__card__checkout__circle {
+  height: 20px;
+  width: 20px;
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.entrees__card__checkout__circle .fa-check, .plats__card__checkout__circle .fa-check, .desserts__card__checkout__circle .fa-check {
+  color: #99E2D0;
+}
+.entrees__card:hover .entrees__card__checkout, .entrees__card:hover .plats__card__checkout, .entrees__card:hover .desserts__card__checkout, .plats__card:hover .entrees__card__checkout, .plats__card:hover .plats__card__checkout, .plats__card:hover .desserts__card__checkout, .desserts__card:hover .entrees__card__checkout, .desserts__card:hover .plats__card__checkout, .desserts__card:hover .desserts__card__checkout {
+  animation: checkout-anim 500ms linear alternate forwards;
+}
+.entrees__card:hover .entrees__card__checkout .fa-check, .entrees__card:hover .plats__card__checkout .fa-check, .entrees__card:hover .desserts__card__checkout .fa-check, .plats__card:hover .entrees__card__checkout .fa-check, .plats__card:hover .plats__card__checkout .fa-check, .plats__card:hover .desserts__card__checkout .fa-check, .desserts__card:hover .entrees__card__checkout .fa-check, .desserts__card:hover .plats__card__checkout .fa-check, .desserts__card:hover .desserts__card__checkout .fa-check {
+  animation: checkout-icon-rotation-anim 500ms linear;
 }
 
 /*# sourceMappingURL=style.css.map */

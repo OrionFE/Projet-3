@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./public/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Oh my food</title>
+</head>
+<body class="Mbody">
+
+    <header class="Mheader">
+
+        <h1 class="Mheader__logo">ohmyfood</h1>
+
+        <a href="index.html" class="Mheader__arrow">
+            
+            <i class="fa-solid fa-arrow-left fa-lg"></i>
+
+        </a>
+
+        <img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="plat" class="Mheader__img">
+        
+    </header>
+
+    <main class="Mmain">
+
+        <div class="Mmain__containerTitle">
+
+            <h2 class="Mmain__title">La palette du goût</h2>
+        
+            <svg 
+        style="color: rgb(0, 0, 0);
+        " xmlns="http://www.w3.org/2000/svg" 
+        width="40" 
+        height="40" 
+        fill="currentColor" 
+        class="bi bi-heart Mmain__heart" 
+        viewBox="0 0 30 30">
+
+            <clipPath id="heart-mask">
+                <path  
+                transform= "translate(2, 2)"
+                d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z">
+                </path>
+
+            </clipPath>
+
+            <path transform="translate(2, 2)" fill="none" stroke="#000000" stroke-width="1" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+
+            <defs>
+                <linearGradient id="gradient">
+                <stop offset="0%"   stop-color="#9356DC" />
+                <stop offset="80%" stop-color="#FF79DA" />
+                </linearGradient>
+            </defs>
+
+            <g clip-path="url(#heart-mask)">
+                <rect class="Mmain__heart__fill" x="0" y="0" width="20" height="20" rx="5" ry="5" fill= url(#gradient) />
+            </g>
+
+            </svg>
+
+        </div>
+        <div class="Mmain__dishes">
+            <ul class="entrees">
+
+                <li class="entrees__title">ENTRÉES</li>
+
+                <li class="entrees__card">
+
+                    <div class="entrees__card__container">
+                        <h3 class="entrees__card__name">Fricassée d'escargot</h3>
+                        <p class="entrees__card__description">Au piment d'espelette</p>
+                        <span class="entrees__card__price">25€</span>
+                    </div>
+
+                    <div class="entrees__card__checkout">
+                        <div class="entrees__card__checkout__circle">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                    </div>
+
+                </li>
+
+
+                <li class="entrees__card">
+
+                    <div class="entrees__card__container">
+                        <h3 class="entrees__card__name">Foie gras de canard mi-cuit</h3>
+                        <p class="entrees__card__description">Et ses copeaux de truffe noire</p>
+                        <span class="entrees__card__price">35€</span>
+                    </div>
+
+                    <div class="entrees__card__checkout">
+                        <div class="entrees__card__checkout__circle">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                    </div>
+
+                </li>
+
+                
+                <li class="entrees__card">
+
+                    <div class="entrees__card__container">
+                        <h3 class="entrees__card__name">Oeuf au plat</h3>
+                        <p class="entrees__card__description">Assaisonné à la truffe sur lit de caviar</p>
+                        <span class="entrees__card__price">20€</span>
+                    </div>
+
+                    <div class="entrees__card__checkout">
+                        <div class="entrees__card__checkout__circle">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                    </div>
+
+                </li>
+
+               
+
+            </ul>
+
+            <ul class="plats">
+
+                <li class="plats__title">PLATS</li>
+
+                <li class="plats__card">
+
+                    <div class="plats__card__container">
+                        <h3 class="plats__card__name">Filet de boeuf aux herbes</h3>
+                        <p class="plats__card__description">Accompagné de sa ribambelle de légumes</p>
+                        <span class="plats__card__price">40€</span>
+                    </div>
+
+                    <div class="plats__card__checkout">
+                        <div class="plats__card__checkout__circle">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                    </div>
+
+                </li>
+
+
+                <li class="plats__card">
+
+                    <div class="plats__card__container">
+                        <h3 class="plats__card__name">Parmentier de queue de boeuf</h3>
+                        <p class="plats__card__description">À la truffe noire sur sa purée de panais</p>
+                        <span class="plats__card__price">35€</span>
+                    </div>
+
+                    <div class="plats__card__checkout">
+                        <div class="plats__card__checkout__circle">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                    </div>
+
+                </li>
+
+                
+                <li class="plats__card">
+
+                    <div class="plats__card__container">
+                        <h3 class="plats__card__name">Filet de turbot</h3>
+                        <p class="plats__card__description">Aux agrumes</p>
+                        <span class="plats__card__price">44€</span>
+                    </div>
+
+                    <div class="plats__card__checkout">
+                        <div class="plats__card__checkout__circle">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                    </div>
+
+                </li>
+
+               
+
+            </ul>
+
+            <ul class="desserts">
+
+                <li class="desserts__title">PLATS</li>
+
+                <li class="desserts__card">
+
+                    <div class="desserts__card__container">
+                        <h3 class="desserts__card__name">Fricassée d'escargot</h3>
+                        <p class="desserts__card__description">Au piment d'espelette</p>
+                        <span class="desserts__card__price">25€</span>
+                    </div>
+
+                    <div class="desserts__card__checkout">
+                        <div class="desserts__card__checkout__circle">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                    </div>
+
+                </li>
+
+
+                <li class="desserts__card">
+
+                    <div class="desserts__card__container">
+                        <h3 class="desserts__card__name">Paris-Brest</h3>
+                        <p class="desserts__card__description">Revisité</p>
+                        <span class="desserts__card__price">18€</span>
+                    </div>
+
+                    <div class="desserts__card__checkout">
+                        <div class="desserts__card__checkout__circle">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                    </div>
+
+                </li>
+
+                
+                <li class="desserts__card">
+
+                    <div class="desserts__card__container">
+                        <h3 class="desserts__card__name">Macaron au chocolat d'exception</h3>
+                        <p class="desserts__card__description">Et glace à la vanille de Madagascar</p>
+                        <span class="desserts__card__price">22€</span>
+                    </div>
+
+                    <div class="desserts__card__checkout">
+                        <div class="desserts__card__checkout__circle">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                    </div>
+
+                </li>
+
+               
+
+            </ul>
+
+        </div>
+
+        <button class="Mmain__btn btn">Commander</button>
+        
+    </main>
+
+    <footer class="footer">
+
+        <h3 class="footer__logo">ohmyfood</h3>
+
+        <ul class="footer__list">
+
+            <li class="flist">
+                <i class="flist__icon fa-solid fa-utensils"></i>
+                <span class="flist__text">Proposer un restaurant</span>
+            </li>
+
+            <li class="flist">
+                <i class="flist__icon fa-solid fa-handshake-angle fa-xs"></i>
+                <span class="flist__text">Devenir partenaire</span>
+            </li>
+
+            <li class="flist">
+                Mentions légales
+            </li>
+
+            <li class="flist">
+                Contact
+            </li>
+
+        </ul>
+
+
+        
+
+    </footer>
+
+    
+</body>
+</html>

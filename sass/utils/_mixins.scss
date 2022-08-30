@@ -27,3 +27,90 @@
 @mixin margin_rcard_title {
     margin-left: 5%;
 }
+
+@mixin style-menu {
+    
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    &__title{
+
+        &::after{
+            content: "";
+            display: block;
+            width: 35px;
+            height: 2.5px;
+            background-color: $colour-tiertary;
+            margin-top: 5px;
+        }
+    }
+
+    &__card{
+        width: 100%;
+        height: 55px;
+        border-radius: 13px;
+        background-color: white;
+        @include shadow_card(0.2);
+        position: relative;
+       display: inline-flex;
+        overflow: hidden;
+        cursor: pointer;
+        
+        &__container{
+            width: 120%;
+            position: relative;
+            left: 0;
+            margin: auto 0;
+        }
+
+
+        &__name{
+            margin-left: 20px;
+        }
+
+        &__description{
+            margin-left: 20px;
+            width: 80%;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        &__price{
+            position: absolute;
+            right: -20px;
+            bottom: 0px;
+        }
+
+        &__checkout{
+            width: 80px;
+            height: 100%;
+            background-color: $colour-tiertary;
+            @include flex_center();
+            transform: translateX(150%);
+            margin-left: 0;
+
+            &__circle{
+                height: 20px;
+                width: 20px;
+                background-color: white;
+                border-radius: 20px;
+                @include flex_center();
+                
+                & .fa-check{
+                    color: $colour-tiertary;
+                }
+            }
+        }
+
+        &:hover &__checkout {
+            animation: checkout-anim 500ms linear alternate forwards;
+        }
+
+        &:hover &__checkout .fa-check {
+            animation: checkout-icon-rotation-anim 500ms linear;
+        }
+    }
+}

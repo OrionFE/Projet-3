@@ -42,3 +42,27 @@
         100% { visibility: hidden; opacity: 0;}
 }
 
+@keyframes checkout-anim{
+
+    from {
+        transform: translateX(150%);
+        margin-left: 0;
+    }
+
+    to {
+        transform: translateX(0%);
+        margin-left: 30px;
+    }
+}
+
+@keyframes checkout-icon-rotation-anim {
+        
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
