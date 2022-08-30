@@ -54,12 +54,28 @@
         background-color: white;
         @include shadow_card(0.2);
         position: relative;
-       display: inline-flex;
+        display: flex;
+        gap: 10px;
         overflow: hidden;
         cursor: pointer;
+        transform: translateY(-20%);
+        opacity: 0;
+
+        $elements: 4;
+
+        @for $i from 1 to $elements {
+
+            &:nth-child(#{$i+1}){
+                animation: fade-in 1000ms $i*300ms ease-in forwards;
+            }
+
+        }
         
         &__container{
-            width: 120%;
+            // width: 100%;
+            // flex: [max] [min] [ideal size];
+            min-width: 0;
+            flex: 0 0 80%;
             position: relative;
             left: 0;
             margin: auto 0;
@@ -68,28 +84,33 @@
 
         &__name{
             margin-left: 20px;
+            // width: 80%;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
         }
 
         &__description{
             margin-left: 20px;
-            width: 80%;
+            // width: 80%;
             text-overflow: ellipsis;
             white-space: nowrap;
             overflow: hidden;
         }
 
         &__price{
-            position: absolute;
-            right: -20px;
-            bottom: 0px;
+            margin-top: 20px;
+            padding-left: 10px;
+            padding-right: 10px;
+            flex: 1 0 auto;
         }
 
         &__checkout{
-            width: 80px;
             height: 100%;
             background-color: $colour-tiertary;
             @include flex_center();
-            transform: translateX(150%);
+            flex: 0 0 60px;
+
             margin-left: 0;
 
             &__circle{
@@ -105,7 +126,7 @@
             }
         }
 
-        &:hover &__checkout {
+        &:hover &__container {
             animation: checkout-anim 500ms linear alternate forwards;
         }
 
