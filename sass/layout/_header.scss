@@ -55,17 +55,17 @@
     &__oh{
         transform: translate(-100vw, ($space-loader * 2)); 
        
-        animation: load-oh $anim-dur-loader cubic-bezier(.51,0,.49,1.67) both;
+        animation: load-oh $anim-dur-loader cubic-bezier(.51,0,.49,1.67) ;
     }
 
     &__my{
         transform: translate(-100vw, $space-loader); 
-        animation: load-my $anim-dur-loader cubic-bezier(.98,0,.56,1.7)  $anim-delay-loader / 2 both;
+        animation: load-my $anim-dur-loader cubic-bezier(.98,0,.56,1.7)  $anim-delay-loader / 2 ;
     }
 
     &__food{
         transform: translate(-500%, 0px); 
 
-        animation: load-food $anim-dur-loader cubic-bezier(.98,0,.56,1.7)  $anim-delay-loader both;
+        animation: load-food $anim-dur-loader cubic-bezier(.98,0,.56,1.7)  $anim-delay-loader ;
     }
 }
