@@ -60,6 +60,14 @@
                 margin-left: 50px;
             }
 
+            &__link{
+                position: absolute;
+                width: 180px;
+                height: 60px;
+                opacity: .5;
+                margin-left: 50px;
+            }
+
             &__nav{
                 display: flex;
             }
@@ -112,7 +120,7 @@
     }
 
     &__food{
-        transform: translate(-500%, 0px); 
+        transform: translate(-100vw, 0px); 
 
         animation: load-food $anim-dur-loader cubic-bezier(.98,0,.56,1.7)  $anim-delay-loader ;
     }

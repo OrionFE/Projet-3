@@ -282,6 +282,13 @@ button {
   .header__logo__h1 {
     margin-left: 50px;
   }
+  .header__logo__link {
+    position: absolute;
+    width: 180px;
+    height: 60px;
+    opacity: 0.5;
+    margin-left: 50px;
+  }
   .header__logo__nav {
     display: flex;
   }
@@ -331,7 +338,7 @@ button {
   animation: load-my 3000ms cubic-bezier(0.98, 0, 0.56, 1.7) 187.5ms;
 }
 .loader__food {
-  transform: translate(-500%, 0px);
+  transform: translate(-100vw, 0px);
   animation: load-food 3000ms cubic-bezier(0.98, 0, 0.56, 1.7) 375ms;
 }
 
@@ -676,6 +683,9 @@ button {
 }
 .entrees__card:nth-child(4), .plats__card:nth-child(4), .desserts__card:nth-child(4) {
   animation: fade-in 1000ms 900ms ease-in forwards;
+}
+.entrees__card:nth-child(5), .plats__card:nth-child(5), .desserts__card:nth-child(5) {
+  animation: fade-in 1000ms 1200ms ease-in forwards;
 }
 .entrees__card__container, .plats__card__container, .desserts__card__container {
   min-width: 0;
