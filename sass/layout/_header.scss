@@ -92,6 +92,14 @@
        margin: 20px 0 30px 0;
     }
 
+    &__link-rest{
+        background-color: aqua;
+        opacity: .5;
+        width: 200px;
+        height: 40px;
+        position: absolute;
+    }
+
     @include desktop{
         display: none;
     }

@@ -7,7 +7,7 @@
     align-items: center;    
 
     &__title{
-        width: 90%;
+        align-self: flex-start;
         margin-bottom: 30px;
     }
     
@@ -30,8 +30,7 @@
     @include desktop{
 
         &__title{
-            margin-left: 0;
-            width: unset;
+            margin-left: 47px;
         }
 
         &__list{
@@ -66,7 +65,7 @@
     }
 
     &__icon{
-        margin-left: -250px;
+        margin-left: -230px;
         color: darken($colour-backgound, 40%);
 
     }

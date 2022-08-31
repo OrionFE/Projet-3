@@ -94,6 +94,13 @@ button{
     &__logo{
         font-family: 'Shrikhand', cursive;
     }
+
+    & a{
+        color: white;
+        &:visited{
+            color: white;
+        }
+    }
 }
 
 .flist{

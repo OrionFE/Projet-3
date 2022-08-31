@@ -97,6 +97,12 @@ button {
 .footer__logo {
   font-family: "Shrikhand", cursive;
 }
+.footer a {
+  color: white;
+}
+.footer a:visited {
+  color: white;
+}
 
 .flist {
   font-weight: 300;
@@ -310,6 +316,13 @@ button {
   width: 90%;
   margin: 20px 0 30px 0;
 }
+.description__link-rest {
+  background-color: aqua;
+  opacity: 0.5;
+  width: 200px;
+  height: 40px;
+  position: absolute;
+}
 @media screen and (min-width: 1024px) {
   .description {
     display: none;
@@ -351,7 +364,7 @@ button {
   align-items: center;
 }
 .fonctionnement__title {
-  width: 90%;
+  align-self: flex-start;
   margin-bottom: 30px;
 }
 .fonctionnement__list {
@@ -369,8 +382,7 @@ button {
 }
 @media screen and (min-width: 1024px) {
   .fonctionnement__title {
-    margin-left: 0;
-    width: unset;
+    margin-left: 47px;
   }
   .fonctionnement__list {
     flex-direction: row;
@@ -405,7 +417,7 @@ button {
   color: white;
 }
 .fcard__icon {
-  margin-left: -250px;
+  margin-left: -230px;
   color: #909090;
 }
 .fcard__text {
