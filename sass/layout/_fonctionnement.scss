@@ -30,10 +30,13 @@
     @include desktop{
 
         &__title{
-            margin-left: 47px;
+            margin-left: 0;
+            align-self: unset;
+            width: unset;
         }
 
         &__list{
+            width: fit-content;
             flex-direction: row;
             gap: 80px;
             padding-left: 10px;
@@ -96,7 +99,8 @@
     }
 
     @include desktop{
-        max-width: 400px;
+        width: 250px;
+        gap: 10px;
         opacity: 0;
 
         $elements: 3;
