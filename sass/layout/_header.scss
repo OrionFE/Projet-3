@@ -106,7 +106,7 @@
 }
 
 .loader{
-    height: 100%;
+    height: 100vh;
     width: 100%;
     background-color: white;
     opacity: 1;
@@ -124,7 +124,7 @@
 
     &__my{
         transform: translate(-100vw, $space-loader); 
-        animation: load-my $anim-dur-loader cubic-bezier(.98,0,.56,1.7)  $anim-delay-loader / 2 ;
+        animation: load-my $anim-dur-loader cubic-bezier(.98,0,.56,1.7)  calc($anim-delay-loader / 2) ;
     }
 
     &__food{

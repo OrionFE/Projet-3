@@ -17,7 +17,7 @@ $font-size-logo: 32px;
 $font-size-title: 15px;
 
 $anim-dur-loader: 3000ms;
-$anim-delay-loader: $anim-dur-loader / 8;
+$anim-delay-loader: calc($anim-dur-loader / 8);
 
 $space-loader: -30px;
 
